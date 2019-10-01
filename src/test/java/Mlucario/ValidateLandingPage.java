@@ -1,31 +1,31 @@
 package Mlucario;
 
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObject.LandingPage;
-import pageObject.LoginPage;
 
-public class HomePage extends base {
+public class ValidateLandingPage extends base {
 
-	@Test(dataProvider = "getData")
-	public void basePageNavigation(String userName, String passWord, String text) throws IOException {
+	@Test
+	public void basePageNavigation() throws IOException {
 		// create WebDriver based on properties file
 		driver = initializeDriver();
 		driver.get(prop.getProperty("url"));
+
 		LandingPage ld = new LandingPage(driver);
-		// Go to Login Page
-		ld.getLogin().click();
 
-		LoginPage lg = new LoginPage(driver);
+		// Test if we see "Featured Courses"
+		String expected = "FEATURED COURSES";
+		AssertJUnit.assertEquals(ld.getTitleHeader().getText(), expected);
 
-		lg.getEmail().sendKeys(userName);
-		lg.getPassword().sendKeys(passWord);
-		System.out.println(text);
-		lg.getLoginButton().click();
+		// Test Navigation Bar
+		AssertJUnit.assertTrue(ld.getNavigationBar().isDisplayed());
 	}
 
 	@DataProvider

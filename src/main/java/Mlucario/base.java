@@ -13,6 +13,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class base {
 	public WebDriver driver;
 	private int implicitlyWaitTime = 10;
+	public Properties prop = new Properties();
 
 	/**
 	 * initializeDriver method will setup WebDriver base on clien Broswer (chrome.
@@ -21,7 +22,7 @@ public class base {
 	 * @throws IOException
 	 */
 	public WebDriver initializeDriver() throws IOException {
-		Properties prop = new Properties();
+
 		FileInputStream fis = new FileInputStream("resources/enviroment.properties");
 
 		prop.load(fis);
