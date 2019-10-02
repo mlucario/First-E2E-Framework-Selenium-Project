@@ -1,21 +1,28 @@
 package Mlucario;
 
-import org.testng.annotations.Test;
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObject.LandingPage;
 import pageObject.LoginPage;
+import resources.base;
 
 public class HomePage extends base {
+	@BeforeTest
+	public void initialize() throws IOException {
+		// create WebDriver based on properties file
+		driver = initializeDriver();
+
+	}
 
 	@Test(dataProvider = "getData")
 	public void basePageNavigation(String userName, String passWord, String text) throws IOException {
-		// create WebDriver based on properties file
-		driver = initializeDriver();
 		driver.get(prop.getProperty("url"));
+
 		LandingPage ld = new LandingPage(driver);
 		// Go to Login Page
 		ld.getLogin().click();
@@ -24,7 +31,7 @@ public class HomePage extends base {
 
 		lg.getEmail().sendKeys(userName);
 		lg.getPassword().sendKeys(passWord);
-		System.out.println(text);
+		LOGGER.info(text);
 		lg.getLoginButton().click();
 	}
 
@@ -48,4 +55,11 @@ public class HomePage extends base {
 
 		return data;
 	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+		driver = null;
+	}
+
 }

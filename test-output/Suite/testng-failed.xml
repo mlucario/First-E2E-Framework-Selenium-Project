@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Mlucario.ValidateLandingPage">
+        <methods>
+          <include name="initialize"/>
+          <include name="closeBroswer"/>
+        </methods>
+      </class> <!-- Mlucario.ValidateLandingPage -->
+      <class name="Mlucario.HomePage">
+        <methods>
+          <include name="closeBroswer"/>
+          <include name="basePageNavigation" invocation-numbers="0 1"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.HomePage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

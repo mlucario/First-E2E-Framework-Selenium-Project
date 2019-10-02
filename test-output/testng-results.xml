@@ -1,43 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9565" started-at="2019-10-01T15:36:05Z" finished-at="2019-10-01T15:36:14Z">
+  <suite name="Suite_1" duration-ms="59293" started-at="2019-10-02T12:06:17Z" finished-at="2019-10-02T12:07:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9565" started-at="2019-10-01T15:36:05Z" finished-at="2019-10-01T15:36:14Z">
-      <class name="Mlucario.ValidateLandingPage">
-        <test-method status="FAIL" signature="basePageNavigation()[pri:0, instance:Mlucario.ValidateLandingPage@4678c730]" name="basePageNavigation" duration-ms="9555" started-at="2019-10-01T08:36:05Z" finished-at="2019-10-01T08:36:14Z">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
+    <test name="Validate User Login" duration-ms="24986" started-at="2019-10-02T12:06:17Z" finished-at="2019-10-02T12:06:42Z">
+      <class name="Mlucario.HomePage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="initialize" is-config="true" duration-ms="9556" started-at="2019-10-02T05:06:17Z" finished-at="2019-10-02T05:06:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="basePageNavigation" duration-ms="11584" started-at="2019-10-02T05:06:27Z" data-provider="getData" finished-at="2019-10-02T05:06:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[non_restrict_user@qw.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Non restricted user]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="basePageNavigation(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="basePageNavigation" duration-ms="3223" started-at="2019-10-02T05:06:38Z" data-provider="getData" finished-at="2019-10-02T05:06:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[restricted_user@qw.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[restricted user]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="tearDown" is-config="true" duration-ms="610" started-at="2019-10-02T05:06:42Z" finished-at="2019-10-02T05:06:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Mlucario.HomePage -->
+    </test> <!-- Validate User Login -->
+    <test name="Validate title in the page" duration-ms="17796" started-at="2019-10-02T12:06:42Z" finished-at="2019-10-02T12:07:00Z">
+      <class name="Mlucario.ValidateTitle">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="initialize" is-config="true" duration-ms="16005" started-at="2019-10-02T05:06:42Z" finished-at="2019-10-02T05:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="FAIL" signature="basePageNavigation()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="basePageNavigation" duration-ms="23" started-at="2019-10-02T05:06:58Z" finished-at="2019-10-02T05:06:59Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid argument
-  (Session info: chrome=77.0.3865.90)
-Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
-System info: host: 'DESKTOP-F826NE3', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\nhonq\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53259}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 95576090d7806cb67b096a0df0428a9b]]>
+              <![CDATA[expected [FEATURED COURSES123] but found [FEATURED COURSES]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=77.0.3865.90)
-Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
-System info: host: 'DESKTOP-F826NE3', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\nhonq\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53259}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 95576090d7806cb67b096a0df0428a9b
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-	at Mlucario.ValidateLandingPage.basePageNavigation(ValidateLandingPage.java:17)
+              <![CDATA[java.lang.AssertionError: expected [FEATURED COURSES123] but found [FEATURED COURSES]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at Mlucario.ValidateTitle.basePageNavigation(ValidateTitle.java:31)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,11 +104,31 @@ Session ID: 95576090d7806cb67b096a0df0428a9b
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basePageNavigation -->
-      </class> <!-- Mlucario.ValidateLandingPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="tearDown" is-config="true" duration-ms="600" started-at="2019-10-02T05:07:00Z" finished-at="2019-10-02T05:07:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Mlucario.ValidateTitle -->
+    </test> <!-- Validate title in the page -->
+    <test name="Validate Navigation in the page" duration-ms="16178" started-at="2019-10-02T12:07:00Z" finished-at="2019-10-02T12:07:17Z">
+      <class name="Mlucario.validateNavigationBar">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="initialize" is-config="true" duration-ms="15552" started-at="2019-10-02T05:07:00Z" finished-at="2019-10-02T05:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="basePageNavigation()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="basePageNavigation" duration-ms="26" started-at="2019-10-02T05:07:16Z" finished-at="2019-10-02T05:07:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- basePageNavigation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="tearDown" is-config="true" duration-ms="598" started-at="2019-10-02T05:07:16Z" finished-at="2019-10-02T05:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Mlucario.validateNavigationBar -->
+    </test> <!-- Validate Navigation in the page -->
+  </suite> <!-- Suite_1 -->
 </testng-results>
