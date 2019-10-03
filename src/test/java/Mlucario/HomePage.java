@@ -20,7 +20,7 @@ public class HomePage extends base {
 	}
 
 	@Test(dataProvider = "getData")
-	public void basePageNavigation(String userName, String passWord, String text) throws IOException {
+	public void testLoginFeature(String userName, String passWord, String text) throws IOException {
 		driver.get(prop.getProperty("url"));
 
 		LandingPage ld = new LandingPage(driver);

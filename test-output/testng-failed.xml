@@ -8,7 +8,7 @@
     <classes>
       <class name="Mlucario.ValidateTitle">
         <methods>
-          <include name="basePageNavigation"/>
+          <include name="validateTitle"/>
           <include name="initialize"/>
           <include name="tearDown"/>
         </methods>

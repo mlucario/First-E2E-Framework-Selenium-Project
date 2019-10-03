@@ -21,7 +21,7 @@ public class validateNavigationBar extends base {
 	}
 
 	@Test
-	public void basePageNavigation() {
+	public void validateNavigationBar() {
 
 		LandingPage ld = new LandingPage(driver);
 
