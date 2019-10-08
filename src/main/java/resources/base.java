@@ -35,7 +35,14 @@ public class base {
 
 		prop.load(fis);
 
-		String broswerName = prop.getProperty("browser");
+		// Read propertise file
+//		String broswerName = prop.getProperty("browser");
+
+		/**
+		 * Update Optimze with Jenkin
+		 */
+
+		String broswerName = System.getProperty("browser");
 
 		// Set System Property base on system and browser
 		switch (broswerName.toLowerCase()) {
