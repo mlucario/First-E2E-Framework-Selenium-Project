@@ -18,7 +18,7 @@ import resources.base;
 
 public class Listeners implements ITestListener {
 
-	base b = new base();
+	private base b = new base();
 
 	@Override
 	public void onTestStart(ITestResult result) {

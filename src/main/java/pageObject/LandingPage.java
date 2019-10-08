@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 
 public class LandingPage {
 
-	public WebDriver driver;
+	private WebDriver driver;
 
-	By signIn = By.xpath("//span[contains(text(),'Login')]");
-	By titleHeader = By.xpath("//h2[contains(text(),'Featured Courses')] ");
-	By navBar = By.tagName("nav");
+	private By signIn = By.xpath("//span[contains(text(),'Login')]");
+	private By titleHeader = By.xpath("//h2[contains(text(),'Featured Courses')] ");
+	private By navBar = By.tagName("nav");
 
 	public LandingPage(WebDriver driver) {
 		this.driver = driver;

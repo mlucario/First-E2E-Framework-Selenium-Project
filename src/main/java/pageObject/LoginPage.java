@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 
 	private WebDriver driver;
-	By email = By.cssSelector("#user_email");
-	By password = By.cssSelector("[type='password']");
-	By loginBtn = By.cssSelector("[value='Log In']");
+	private By email = By.cssSelector("#user_email");
+	private By password = By.cssSelector("[type='password']");
+	private By loginBtn = By.cssSelector("[value='Log In']");
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;

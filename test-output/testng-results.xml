@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite_1" duration-ms="65766" started-at="2019-10-03T17:44:07Z" finished-at="2019-10-03T17:45:13Z">
+  <suite name="Suite_1" duration-ms="59539" started-at="2019-10-08T15:06:30Z" finished-at="2019-10-08T15:07:30Z">
     <groups>
     </groups>
-    <test name="Validate User Login" duration-ms="26103" started-at="2019-10-03T17:44:07Z" finished-at="2019-10-03T17:44:34Z">
+    <test name="Validate User Login" duration-ms="24313" started-at="2019-10-08T15:06:30Z" finished-at="2019-10-08T15:06:54Z">
       <class name="Mlucario.HomePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="initialize" is-config="true" duration-ms="9651" started-at="2019-10-03T10:44:07Z" finished-at="2019-10-03T10:44:17Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="initialize" is-config="true" duration-ms="9635" started-at="2019-10-08T08:06:30Z" finished-at="2019-10-08T08:06:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="12593" started-at="2019-10-03T10:44:17Z" data-provider="getData" finished-at="2019-10-03T10:44:30Z">
+        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="10397" started-at="2019-10-08T08:06:40Z" data-provider="getData" finished-at="2019-10-08T08:06:50Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="3262" started-at="2019-10-03T10:44:30Z" data-provider="getData" finished-at="2019-10-03T10:44:33Z">
+        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="3667" started-at="2019-10-08T08:06:50Z" data-provider="getData" finished-at="2019-10-08T08:06:54Z">
           <params>
             <param index="0">
               <value>
@@ -53,19 +53,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="tearDown" is-config="true" duration-ms="581" started-at="2019-10-03T10:44:33Z" finished-at="2019-10-03T10:44:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="tearDown" is-config="true" duration-ms="601" started-at="2019-10-08T08:06:54Z" finished-at="2019-10-08T08:06:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Mlucario.HomePage -->
     </test> <!-- Validate User Login -->
-    <test name="Validate title in the page" duration-ms="22146" started-at="2019-10-03T17:44:34Z" finished-at="2019-10-03T17:44:56Z">
+    <test name="Validate title in the page" duration-ms="18761" started-at="2019-10-08T15:06:55Z" finished-at="2019-10-08T15:07:13Z">
       <class name="Mlucario.ValidateTitle">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="initialize" is-config="true" duration-ms="20401" started-at="2019-10-03T10:44:34Z" finished-at="2019-10-03T10:44:54Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="initialize" is-config="true" duration-ms="16941" started-at="2019-10-08T08:06:55Z" finished-at="2019-10-08T08:07:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="validateTitle()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="validateTitle" duration-ms="20" started-at="2019-10-03T10:44:54Z" finished-at="2019-10-03T10:44:54Z">
+        <test-method status="FAIL" signature="validateTitle()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="validateTitle" duration-ms="23" started-at="2019-10-08T08:07:12Z" finished-at="2019-10-08T08:07:12Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [FEATURED COURSES123] but found [FEATURED COURSES]]]>
@@ -108,23 +108,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="tearDown" is-config="true" duration-ms="589" started-at="2019-10-03T10:44:55Z" finished-at="2019-10-03T10:44:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="tearDown" is-config="true" duration-ms="597" started-at="2019-10-08T08:07:13Z" finished-at="2019-10-08T08:07:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Mlucario.ValidateTitle -->
     </test> <!-- Validate title in the page -->
-    <test name="Validate Navigation in the page" duration-ms="17164" started-at="2019-10-03T17:44:56Z" finished-at="2019-10-03T17:45:13Z">
+    <test name="Validate Navigation in the page" duration-ms="16084" started-at="2019-10-08T15:07:13Z" finished-at="2019-10-08T15:07:30Z">
       <class name="Mlucario.validateNavigationBar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="initialize" is-config="true" duration-ms="16533" started-at="2019-10-03T10:44:56Z" finished-at="2019-10-03T10:45:13Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="initialize" is-config="true" duration-ms="15469" started-at="2019-10-08T08:07:13Z" finished-at="2019-10-08T08:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validateNavigationBar()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="validateNavigationBar" duration-ms="30" started-at="2019-10-03T10:45:13Z" finished-at="2019-10-03T10:45:13Z">
+        <test-method status="PASS" signature="validateNavigationBar()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="validateNavigationBar" duration-ms="33" started-at="2019-10-08T08:07:29Z" finished-at="2019-10-08T08:07:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNavigationBar -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="tearDown" is-config="true" duration-ms="600" started-at="2019-10-03T10:45:13Z" finished-at="2019-10-03T10:45:13Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="tearDown" is-config="true" duration-ms="580" started-at="2019-10-08T08:07:29Z" finished-at="2019-10-08T08:07:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

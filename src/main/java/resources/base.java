@@ -18,6 +18,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
 	public static WebDriver driver;
+	private static String fileSeperator = System.getProperty("file.separator");
 	private int implicitlyWaitTime = 10;
 	public Properties prop = new Properties();
 	public final Logger LOGGER = LogManager.getLogger(base.class.getName());
@@ -31,7 +32,8 @@ public class base {
 	 */
 	public WebDriver initializeDriver() throws IOException {
 
-		FileInputStream fis = new FileInputStream("src/main/java/resources/enviroment.properties");
+		FileInputStream fis = new FileInputStream("src" + fileSeperator + "main" + fileSeperator + "java"
+				+ fileSeperator + "resources" + fileSeperator + "enviroment.properties");
 
 		prop.load(fis);
 
