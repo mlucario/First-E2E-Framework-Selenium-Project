@@ -8,23 +8,33 @@ public class LandingPage {
 
 	private WebDriver driver;
 
-	private By signIn = By.xpath("//span[contains(text(),'Login')]");
-	private By titleHeader = By.xpath("//h2[contains(text(),'Featured Courses')] ");
-	private By navBar = By.tagName("nav");
+	private By homeBarIcon = By.cssSelector("#home_bar");
+	private By basicIcon = By.cssSelector("#basic_example");
+	private By intermediateIcon = By.cssSelector("#inter_example");
+	private By advancedIcon = By.cssSelector("#advanced_example");
+	private By completeIcon = By.cssSelector("#done_example");
 
 	public LandingPage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public WebElement getLogin() {
-		return driver.findElement(signIn);
+	public WebElement getBeginIcon() {
+		return driver.findElement(homeBarIcon);
 	}
 
-	public WebElement getTitleHeader() {
-		return driver.findElement(titleHeader);
+	public WebElement getDoneIcon() {
+		return driver.findElement(completeIcon);
 	}
 
-	public WebElement getNavigationBar() {
-		return driver.findElement(navBar);
+	public WebElement getBasicPracticeIcon() {
+		return driver.findElement(basicIcon);
+	}
+
+	public WebElement getIntermediatePracticeIcon() {
+		return driver.findElement(intermediateIcon);
+	}
+
+	public WebElement getAdvantagePracticeIcon() {
+		return driver.findElement(advancedIcon);
 	}
 }

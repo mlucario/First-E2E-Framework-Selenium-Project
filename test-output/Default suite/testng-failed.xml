@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Mlucario.HomePage">
+      <class name="Mlucario.validateBasicExample">
         <methods>
-          <include name="basePageNavigation"/>
           <include name="initialize"/>
+          <include name="validateTitlePage"/>
         </methods>
-      </class> <!-- Mlucario.HomePage -->
+      </class> <!-- Mlucario.validateBasicExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite_1]">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Suite_1]" parallel="tests">
   <listeners>
     <listener class-name="Mlucario.Listeners"/>
   </listeners>
-  <test name="Validate title in the page(failed)">
+  <test name="Validate User Login(failed)" parallel="tests">
     <classes>
-      <class name="Mlucario.HomePage">
+      <class name="Mlucario.validateWelcomePage">
         <methods>
-          <include name="tearDown"/>
+          <include name="validateHeaderTitle"/>
+          <include name="validateIntroText"/>
+          <include name="validateIntermediatePracticeIcon"/>
+          <include name="validateBasicPracticeIcon"/>
           <include name="initialize"/>
+          <include name="validateAdvantagePracticeIcon"/>
+          <include name="validateHomeIcon"/>
+          <include name="validateStartButton"/>
         </methods>
-      </class> <!-- Mlucario.HomePage -->
-      <class name="Mlucario.validateNavigationBar">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- Mlucario.validateNavigationBar -->
-      <class name="Mlucario.ValidateTitle">
-        <methods>
-          <include name="validateTitle"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Mlucario.ValidateTitle -->
+      </class> <!-- Mlucario.validateWelcomePage -->
     </classes>
-  </test> <!-- Validate title in the page(failed) -->
+  </test> <!-- Validate User Login(failed) -->
 </suite> <!-- Failed suite [Suite_1] -->

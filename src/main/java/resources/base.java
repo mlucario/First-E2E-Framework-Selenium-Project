@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
-	public static WebDriver driver;
+	public WebDriver driver;
 	private static String fileSeperator = System.getProperty("file.separator");
 	private int implicitlyWaitTime = 10;
 	public Properties prop = new Properties();
@@ -39,13 +39,13 @@ public class base {
 		prop.load(fis);
 
 		// Read propertise file
-//		String broswerName = prop.getProperty("browser");
+		String broswerName = prop.getProperty("browser");
 
 		/**
 		 * Update Optimze with Jenkin
 		 */
 
-		String broswerName = System.getProperty("browser");
+//		String broswerName = System.getProperty("browser");
 
 		// Set System Property base on system and browser
 		switch (broswerName.toLowerCase()) {
@@ -78,7 +78,7 @@ public class base {
 		return driver;
 	}
 
-	private static WebDriver initChromeDriver(String browserInfo) {
+	private WebDriver initChromeDriver(String browserInfo) {
 		ChromeOptions chromeOptions = new ChromeOptions();
 
 		if (browserInfo.toLowerCase().contains("headless")) {
@@ -91,7 +91,6 @@ public class base {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		} else if (os.contains("Windows")) {
 			System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-			// Add headless to chrome browser
 
 		} else {
 			System.out.println("Other OS. Please contact with Admin to open this features==========");
@@ -99,7 +98,7 @@ public class base {
 		return driver = new ChromeDriver(chromeOptions);
 	}
 
-	private static WebDriver initFirefoxDriver() {
+	private WebDriver initFirefoxDriver() {
 
 //		FirefoxOptions firefoxOptions = new FirefoxOptions();
 //		if (browserInfo.contains("headless")) {

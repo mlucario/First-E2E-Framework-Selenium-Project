@@ -1,134 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite_1" duration-ms="56525" started-at="2019-10-09T03:45:14Z" finished-at="2019-10-09T03:46:11Z">
+  <suite name="Default suite" duration-ms="13603" started-at="2019-10-09T13:06:12Z" finished-at="2019-10-09T13:06:25Z">
     <groups>
     </groups>
-    <test name="Validate User Login" duration-ms="23586" started-at="2019-10-09T03:45:14Z" finished-at="2019-10-09T03:45:38Z">
-      <class name="Mlucario.HomePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.HomePage@ea6147e]" name="initialize" is-config="true" duration-ms="9616" started-at="2019-10-08T20:45:14Z" finished-at="2019-10-08T20:45:24Z">
+    <test name="Default test" duration-ms="13603" started-at="2019-10-09T13:06:12Z" finished-at="2019-10-09T13:06:25Z">
+      <class name="Mlucario.validateBasicExample">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateBasicExample@69997e9d]" name="initialize" is-config="true" duration-ms="13587" started-at="2019-10-09T06:06:12Z" finished-at="2019-10-09T06:06:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@ea6147e]" name="testLoginFeature" duration-ms="10450" started-at="2019-10-08T20:45:24Z" data-provider="getData" finished-at="2019-10-08T20:45:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[non_restrict_user@qw.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Non restricted user]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="validateTitlePage()[pri:0, instance:Mlucario.validateBasicExample@69997e9d]" name="validateTitlePage" duration-ms="4" started-at="2019-10-09T06:06:25Z" finished-at="2019-10-09T06:06:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@ea6147e]" name="testLoginFeature" duration-ms="2947" started-at="2019-10-08T20:45:34Z" data-provider="getData" finished-at="2019-10-08T20:45:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[restricted_user@qw.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[restricted user]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.HomePage@ea6147e]" name="tearDown" is-config="true" duration-ms="548" started-at="2019-10-08T20:45:37Z" finished-at="2019-10-08T20:45:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Mlucario.HomePage -->
-    </test> <!-- Validate User Login -->
-    <test name="Validate title in the page" duration-ms="16743" started-at="2019-10-09T03:45:38Z" finished-at="2019-10-09T03:45:55Z">
-      <class name="Mlucario.ValidateTitle">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@78123e82]" name="initialize" is-config="true" duration-ms="15639" started-at="2019-10-08T20:45:38Z" finished-at="2019-10-08T20:45:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="validateTitle()[pri:0, instance:Mlucario.ValidateTitle@78123e82]" name="validateTitle" duration-ms="39" started-at="2019-10-08T20:45:54Z" finished-at="2019-10-08T20:45:54Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [FEATURED COURSES123] but found [FEATURED COURSES]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [FEATURED COURSES123] but found [FEATURED COURSES]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at Mlucario.ValidateTitle.validateTitle(ValidateTitle.java:31)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@78123e82]" name="tearDown" is-config="true" duration-ms="546" started-at="2019-10-08T20:45:54Z" finished-at="2019-10-08T20:45:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Mlucario.ValidateTitle -->
-    </test> <!-- Validate title in the page -->
-    <test name="Validate Navigation in the page" duration-ms="15905" started-at="2019-10-09T03:45:55Z" finished-at="2019-10-09T03:46:11Z">
-      <class name="Mlucario.validateNavigationBar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@3d6f0054]" name="initialize" is-config="true" duration-ms="15325" started-at="2019-10-08T20:45:55Z" finished-at="2019-10-08T20:46:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validateNavigationBar()[pri:0, instance:Mlucario.validateNavigationBar@3d6f0054]" name="validateNavigationBar" duration-ms="29" started-at="2019-10-08T20:46:10Z" finished-at="2019-10-08T20:46:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateNavigationBar -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@3d6f0054]" name="tearDown" is-config="true" duration-ms="548" started-at="2019-10-08T20:46:10Z" finished-at="2019-10-08T20:46:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Mlucario.validateNavigationBar -->
-    </test> <!-- Validate Navigation in the page -->
-  </suite> <!-- Suite_1 -->
+        </test-method> <!-- validateTitlePage -->
+      </class> <!-- Mlucario.validateBasicExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

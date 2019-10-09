@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite_1">
+<suite name="Suite_1" >
 
 	<listeners>
 		<listener class-name="Mlucario.Listeners" />
 	</listeners>
 
 
-	<test thread-count="5" name="Validate User Login">
+	<test thread-count="1" name="Validate Welcome Page Elements">
 		<classes>
-			<class name="Mlucario.HomePage" />
+			<class name="Mlucario.validateWelcomePage" />
 
 		</classes>
-	</test>
-	<test thread-count="5" name="Validate title in the page">
+	</test>  <!-- Test Landing Page-->
+	
+	<test thread-count="5" name="Validate Basic Example Page">
 		<classes>
-			<class name="Mlucario.ValidateTitle" />
+			<class name="Mlucario.validateBasicExample" />
 
 		</classes>
-	</test>
-	<test thread-count="5" name="Validate Navigation in the page">
-		<classes>
-			<class name="Mlucario.validateNavigationBar" />
-
-		</classes>
-	</test> <!-- Test -->
-
+	</test>  <!-- Test Landing Page-->
 </suite> <!-- Suite -->

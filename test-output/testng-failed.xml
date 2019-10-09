@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite_1]">
-  <listeners>
-    <listener class-name="Mlucario.Listeners"/>
-  </listeners>
-  <test name="Validate title in the page(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Mlucario.HomePage">
+      <class name="Mlucario.validateBasicExample">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
+          <include name="validateTitlePage"/>
         </methods>
-      </class> <!-- Mlucario.HomePage -->
-      <class name="Mlucario.validateNavigationBar">
-        <methods>
-          <include name="tearDown"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- Mlucario.validateNavigationBar -->
-      <class name="Mlucario.ValidateTitle">
-        <methods>
-          <include name="validateTitle"/>
-          <include name="initialize"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- Mlucario.ValidateTitle -->
+      </class> <!-- Mlucario.validateBasicExample -->
     </classes>
-  </test> <!-- Validate title in the page(failed) -->
-</suite> <!-- Failed suite [Suite_1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
