@@ -15,7 +15,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
@@ -40,33 +39,27 @@ public class base {
 		prop.load(fis);
 
 		// Read propertise file
-//		String broswerName = prop.getProperty("browser");
+		String broswerName = prop.getProperty("browser");
 
 		/**
 		 * Update Optimze with Jenkin
 		 */
 
-		String broswerName = System.getProperty("browser");
+//		String broswerName = System.getProperty("browser");
 
 		// Set System Property base on system and browser
 		switch (broswerName.toLowerCase()) {
 		// Run with Chrome Browser
 		case "chrome":
-			ChromeOptions chromeOptions = new ChromeOptions();
-			if (broswerName.contains("headless")) {
-//				chromeOptions.addArguments("--headless");
-				chromeOptions.setHeadless(true);
-			}
 
-			driver = initChromeDriver(chromeOptions);
+			driver = initChromeDriver(broswerName);
 			break;
+
 		// Run with Firefox Browser
 		case "firefox":
-			FirefoxOptions firefoxOptions = new FirefoxOptions();
-			if (broswerName.contains("headless")) {
-				firefoxOptions.setHeadless(true);
-			}
-			driver = initFirefoxDriver(firefoxOptions);
+
+//			driver = initFirefoxDriver(broswerName);
+			driver = initFirefoxDriver();
 			break;
 		// Run with ie Browser, support for Windows only
 		case "ie":
@@ -74,11 +67,7 @@ public class base {
 			driver = new InternetExplorerDriver();
 			break;
 		default:
-//			System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-			ChromeOptions chromeOption = new ChromeOptions();
-			chromeOption.addArguments("");
-
-			driver = initChromeDriver(chromeOption);
+			driver = initChromeDriver(broswerName);
 			break;
 		}
 
@@ -89,8 +78,14 @@ public class base {
 		return driver;
 	}
 
-	private static WebDriver initChromeDriver(ChromeOptions options) {
+	private static WebDriver initChromeDriver(String browserInfo) {
+		ChromeOptions chromeOptions = new ChromeOptions();
 
+		if (browserInfo.toLowerCase().contains("headless")) {
+			System.out.println("Run with HEADLESS Option!");
+			chromeOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
+					"--ignore-certificate-errors");
+		}
 		System.out.println("Launching google chrome with new profile..");
 		if (os.contains("Mac")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
@@ -101,10 +96,18 @@ public class base {
 		} else {
 			System.out.println("Other OS. Please contact with Admin to open this features==========");
 		}
-		return driver = new ChromeDriver(options);
+		return driver = new ChromeDriver(chromeOptions);
 	}
 
-	private static WebDriver initFirefoxDriver(FirefoxOptions firefoxOptions) {
+	private static WebDriver initFirefoxDriver() {
+
+//		FirefoxOptions firefoxOptions = new FirefoxOptions();
+//		if (browserInfo.contains("headless")) {
+//			System.out.println("Run with HEADLESS Option!");
+//			firefoxOptions.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
+//					"--ignore-certificate-errors");
+//		}
+
 		System.out.println("Launching Firefox browser..");
 		if (os.contains("Mac")) {
 			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
