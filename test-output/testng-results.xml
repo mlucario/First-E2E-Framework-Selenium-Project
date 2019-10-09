@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="4" failed="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite_1" duration-ms="59539" started-at="2019-10-08T15:06:30Z" finished-at="2019-10-08T15:07:30Z">
+  <suite name="Suite_1" duration-ms="447" started-at="2019-10-08T21:46:19Z" finished-at="2019-10-08T21:46:20Z">
     <groups>
     </groups>
-    <test name="Validate User Login" duration-ms="24313" started-at="2019-10-08T15:06:30Z" finished-at="2019-10-08T15:06:54Z">
+    <test name="Validate User Login" duration-ms="105" started-at="2019-10-08T21:46:19Z" finished-at="2019-10-08T21:46:20Z">
       <class name="Mlucario.HomePage">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="initialize" is-config="true" duration-ms="9635" started-at="2019-10-08T08:06:30Z" finished-at="2019-10-08T08:06:40Z">
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="initialize" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:19Z" finished-at="2019-10-08T14:46:19Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at resources.base.initializeDriver(base.java:50)
+	at Mlucario.HomePage.initialize(HomePage.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="10397" started-at="2019-10-08T08:06:40Z" data-provider="getData" finished-at="2019-10-08T08:06:50Z">
+        <test-method status="SKIP" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="78" started-at="2019-10-08T14:46:20Z" data-provider="getData" finished-at="2019-10-08T14:46:20Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="3667" started-at="2019-10-08T08:06:50Z" data-provider="getData" finished-at="2019-10-08T08:06:54Z">
+        <test-method status="SKIP" signature="testLoginFeature(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="testLoginFeature" duration-ms="1" started-at="2019-10-08T14:46:20Z" data-provider="getData" finished-at="2019-10-08T14:46:20Z">
           <params>
             <param index="0">
               <value>
@@ -53,43 +83,30 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="tearDown" is-config="true" duration-ms="601" started-at="2019-10-08T08:06:54Z" finished-at="2019-10-08T08:06:54Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:Mlucario.HomePage@15aab8c6]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Mlucario.HomePage -->
     </test> <!-- Validate User Login -->
-    <test name="Validate title in the page" duration-ms="18761" started-at="2019-10-08T15:06:55Z" finished-at="2019-10-08T15:07:13Z">
+    <test name="Validate title in the page" duration-ms="4" started-at="2019-10-08T21:46:20Z" finished-at="2019-10-08T21:46:20Z">
       <class name="Mlucario.ValidateTitle">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="initialize" is-config="true" duration-ms="16941" started-at="2019-10-08T08:06:55Z" finished-at="2019-10-08T08:07:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialize -->
-        <test-method status="FAIL" signature="validateTitle()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="validateTitle" duration-ms="23" started-at="2019-10-08T08:07:12Z" finished-at="2019-10-08T08:07:12Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [FEATURED COURSES123] but found [FEATURED COURSES]]]>
-            </message>
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="initialize" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [FEATURED COURSES123] but found [FEATURED COURSES]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at Mlucario.ValidateTitle.validateTitle(ValidateTitle.java:31)
+              <![CDATA[java.lang.NullPointerException
+	at resources.base.initializeDriver(base.java:50)
+	at Mlucario.ValidateTitle.initialize(ValidateTitle.java:18)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:616)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
 	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
 	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
@@ -104,27 +121,61 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="SKIP" signature="validateTitle()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="validateTitle" duration-ms="1" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTitle -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="tearDown" is-config="true" duration-ms="597" started-at="2019-10-08T08:07:13Z" finished-at="2019-10-08T08:07:13Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:Mlucario.ValidateTitle@5403f35f]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Mlucario.ValidateTitle -->
     </test> <!-- Validate title in the page -->
-    <test name="Validate Navigation in the page" duration-ms="16084" started-at="2019-10-08T15:07:13Z" finished-at="2019-10-08T15:07:30Z">
+    <test name="Validate Navigation in the page" duration-ms="4" started-at="2019-10-08T21:46:20Z" finished-at="2019-10-08T21:46:20Z">
       <class name="Mlucario.validateNavigationBar">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="initialize" is-config="true" duration-ms="15469" started-at="2019-10-08T08:07:13Z" finished-at="2019-10-08T08:07:29Z">
+        <test-method status="FAIL" signature="initialize()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="initialize" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at resources.base.initializeDriver(base.java:50)
+	at Mlucario.validateNavigationBar.initialize(validateNavigationBar.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validateNavigationBar()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="validateNavigationBar" duration-ms="33" started-at="2019-10-08T08:07:29Z" finished-at="2019-10-08T08:07:29Z">
+        <test-method status="SKIP" signature="validateNavigationBar()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="validateNavigationBar" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNavigationBar -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="tearDown" is-config="true" duration-ms="580" started-at="2019-10-08T08:07:29Z" finished-at="2019-10-08T08:07:30Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:Mlucario.validateNavigationBar@6d4e5011]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-08T14:46:20Z" finished-at="2019-10-08T14:46:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

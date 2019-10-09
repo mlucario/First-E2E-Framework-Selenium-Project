@@ -4,27 +4,64 @@
   <listeners>
     <listener class-name="Mlucario.Listeners"/>
   </listeners>
+  <test name="Validate User Login(failed)">
+    <classes>
+      <class name="Mlucario.ValidateTitle">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.ValidateTitle -->
+      <class name="Mlucario.validateNavigationBar">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.validateNavigationBar -->
+      <class name="Mlucario.HomePage">
+        <methods>
+          <include name="testLoginFeature"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.HomePage -->
+    </classes>
+  </test> <!-- Validate User Login(failed) -->
   <test name="Validate title in the page(failed)">
     <classes>
       <class name="Mlucario.ValidateTitle">
         <methods>
           <include name="validateTitle"/>
           <include name="initialize"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- Mlucario.ValidateTitle -->
       <class name="Mlucario.validateNavigationBar">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- Mlucario.validateNavigationBar -->
       <class name="Mlucario.HomePage">
         <methods>
-          <include name="tearDown"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- Mlucario.HomePage -->
     </classes>
   </test> <!-- Validate title in the page(failed) -->
+  <test name="Validate Navigation in the page(failed)">
+    <classes>
+      <class name="Mlucario.ValidateTitle">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.ValidateTitle -->
+      <class name="Mlucario.validateNavigationBar">
+        <methods>
+          <include name="validateNavigationBar"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.validateNavigationBar -->
+      <class name="Mlucario.HomePage">
+        <methods>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Mlucario.HomePage -->
+    </classes>
+  </test> <!-- Validate Navigation in the page(failed) -->
 </suite> <!-- Failed suite [Suite_1] -->

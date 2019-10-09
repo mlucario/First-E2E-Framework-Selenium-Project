@@ -13,7 +13,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
@@ -50,13 +52,21 @@ public class base {
 		switch (broswerName.toLowerCase()) {
 		// Run with Chrome Browser
 		case "chrome":
+			ChromeOptions chromeOptions = new ChromeOptions();
+			if (broswerName.contains("headless")) {
+//				chromeOptions.addArguments("--headless");
+				chromeOptions.setHeadless(true);
+			}
 
-			driver = initChromeDriver();
+			driver = initChromeDriver(chromeOptions);
 			break;
 		// Run with Firefox Browser
 		case "firefox":
-
-			driver = initFirefoxDriver();
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			if (broswerName.contains("headless")) {
+				firefoxOptions.setHeadless(true);
+			}
+			driver = initFirefoxDriver(firefoxOptions);
 			break;
 		// Run with ie Browser, support for Windows only
 		case "ie":
@@ -65,7 +75,10 @@ public class base {
 			break;
 		default:
 //			System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
-			driver = initChromeDriver();
+			ChromeOptions chromeOption = new ChromeOptions();
+			chromeOption.addArguments("");
+
+			driver = initChromeDriver(chromeOption);
 			break;
 		}
 
@@ -76,19 +89,22 @@ public class base {
 		return driver;
 	}
 
-	private static WebDriver initChromeDriver() {
+	private static WebDriver initChromeDriver(ChromeOptions options) {
+
 		System.out.println("Launching google chrome with new profile..");
 		if (os.contains("Mac")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
 		} else if (os.contains("Windows")) {
 			System.setProperty("webdriver.chrome.driver", "drivers//chromedriver.exe");
+			// Add headless to chrome browser
+
 		} else {
 			System.out.println("Other OS. Please contact with Admin to open this features==========");
 		}
-		return driver = new ChromeDriver();
+		return driver = new ChromeDriver(options);
 	}
 
-	private static WebDriver initFirefoxDriver() {
+	private static WebDriver initFirefoxDriver(FirefoxOptions firefoxOptions) {
 		System.out.println("Launching Firefox browser..");
 		if (os.contains("Mac")) {
 			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
