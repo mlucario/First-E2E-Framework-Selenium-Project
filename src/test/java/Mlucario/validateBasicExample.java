@@ -15,6 +15,11 @@ import resources.base;
 
 public class validateBasicExample extends base {
 
+	/**
+	 * Practice with change Tabs and Print out title each tabs
+	 * 
+	 * @throws IOException
+	 */
 	@BeforeTest
 	public void initialize() throws IOException {
 		// create WebDriver based on properties file
@@ -32,15 +37,17 @@ public class validateBasicExample extends base {
 
 		for (WebElement wepEl : els) {
 			ac.keyDown(Keys.CONTROL).build().perform();
-			System.out.println(wepEl.getAttribute("href"));
+//			System.out.println(wepEl.getAttribute("href"));
 			wepEl.click();
+			LOGGER.info("Navigated to " + wepEl.getAttribute("href"));
+
 		}
 //		ac.release().build().perform();
 //		basic.getSimpleForm().click();
 	}
 
 	@Test
-	public void validateTitlePage() {
+	public void validateListPractice() {
 
 	}
 

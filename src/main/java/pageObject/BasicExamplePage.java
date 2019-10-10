@@ -63,7 +63,8 @@ public class BasicExamplePage {
 
 	public List<WebElement> getAllElement() {
 		WebElement basicZ = driver.findElement(listElements);
-		System.out.println("===============================" + basicZ.findElements(By.tagName("a")).size());
+		// System.out.println("===============================" +
+		// basicZ.findElements(By.tagName("a")).size());
 		return basicZ.findElements(By.tagName("a"));
 	}
 }
