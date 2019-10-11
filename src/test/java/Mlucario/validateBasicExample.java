@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,11 @@ public class validateBasicExample extends base {
 		WelcomePage wc = new WelcomePage(driver);
 		wc.getBasicPracticeIcon().click();
 		LOGGER.info("Navigated to Basic Example Page");
+
+	}
+
+	@Test
+	public void validateListPractice() {
 		Actions ac = new Actions(driver);
 		BasicExamplePage basic = new BasicExamplePage(driver);
 		List<WebElement> els = basic.getAllElement();
@@ -42,13 +48,12 @@ public class validateBasicExample extends base {
 			LOGGER.info("Navigated to " + wepEl.getAttribute("href"));
 
 		}
+		int numTabs = 8;
+		Assert.assertEquals(els.size(), numTabs);
+		
+		driver.ge
 //		ac.release().build().perform();
 //		basic.getSimpleForm().click();
-	}
-
-	@Test
-	public void validateListPractice() {
-
 	}
 
 //	@AfterTest
