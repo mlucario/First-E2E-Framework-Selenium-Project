@@ -1,12 +1,16 @@
 package Mlucario;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -34,7 +38,7 @@ public class validateBasicExample extends base {
 
 	}
 
-	@Test
+	@Test	
 	public void validateListPractice() {
 		Actions ac = new Actions(driver);
 		BasicExamplePage basic = new BasicExamplePage(driver);
@@ -50,16 +54,40 @@ public class validateBasicExample extends base {
 		}
 		int numTabs = 8;
 		Assert.assertEquals(els.size(), numTabs);
+		LOGGER.info("Validated basic sample menu 8 elements");
 		
-		driver.ge
+		Set<String> handle =  driver.getWindowHandles();
+		Iterator<String> x =   handle.iterator();
+		ArrayList<String> actualList = new ArrayList<String>();
+		while(x.hasNext()) {
+			
+			driver.switchTo().window(x.next());
+			actualList.add(driver.getTitle());
+		}
+		ArrayList<String> expectedList = new ArrayList<String>() {
+			{
+				add("Selenium Easy - Best Demo website to practice Selenium Webdriver Online");
+				add("Selenium Easy Demo - Bootstrap Modal Demo to Automate");
+				add("Selenium Easy - Bootstrap Alerts Demo for Automation");
+				add("Selenium Easy - Window Popup Modal Demo");
+				add("Selenium Easy Demo - Automate All Scenarios");
+				add("Selenium Easy Demo - Automate All Scenarios");
+				add("Selenium Easy Demo - Radio buttons demo for Automation");
+				add("Selenium Easy - Checkbox demo for automation using selenium");
+				add("Selenium Easy Demo - Simple Form to Automate using Selenium");
+			}
+		};
+		
+		Assert.assertTrue(actualList.equals(expectedList));
 //		ac.release().build().perform();
 //		basic.getSimpleForm().click();
 	}
 
-//	@AfterTest
-//	public void tearDown() {
-//		driver.quit();
-//		driver = null;
-//	}
+	
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+		driver = null;
+	}
 
 }
