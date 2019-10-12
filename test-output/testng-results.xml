@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13603" started-at="2019-10-09T13:06:12Z" finished-at="2019-10-09T13:06:25Z">
+  <suite name="Suite_test" duration-ms="15633" started-at="2019-10-12T21:59:46Z" finished-at="2019-10-12T22:00:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13603" started-at="2019-10-09T13:06:12Z" finished-at="2019-10-09T13:06:25Z">
-      <class name="Mlucario.validateBasicExample">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:Mlucario.validateBasicExample@69997e9d]" name="initialize" is-config="true" duration-ms="13587" started-at="2019-10-09T06:06:12Z" finished-at="2019-10-09T06:06:25Z">
+    <test name="Validate Welcome Page Elements" duration-ms="15633" started-at="2019-10-12T21:59:46Z" finished-at="2019-10-12T22:00:02Z">
+      <class name="basicSample.ValidateDropDownMenu">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="initialize" is-config="true" duration-ms="14004" started-at="2019-10-12T14:59:46Z" finished-at="2019-10-12T15:00:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validateTitlePage()[pri:0, instance:Mlucario.validateBasicExample@69997e9d]" name="validateTitlePage" duration-ms="4" started-at="2019-10-09T06:06:25Z" finished-at="2019-10-09T06:06:25Z">
+        <test-method status="PASS" signature="validated_multi_selected_value_of_dropdown_menu_1()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="validated_multi_selected_value_of_dropdown_menu_1" duration-ms="553" started-at="2019-10-12T15:00:00Z" finished-at="2019-10-12T15:00:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateTitlePage -->
-      </class> <!-- Mlucario.validateBasicExample -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- validated_multi_selected_value_of_dropdown_menu_1 -->
+        <test-method status="PASS" signature="validated_multi_selected_value_of_dropdown_menu_2()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="validated_multi_selected_value_of_dropdown_menu_2" duration-ms="827" started-at="2019-10-12T15:00:01Z" finished-at="2019-10-12T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validated_multi_selected_value_of_dropdown_menu_2 -->
+        <test-method status="PASS" signature="validated_select_Monday_of_dropdown_menu()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="validated_select_Monday_of_dropdown_menu" duration-ms="67" started-at="2019-10-12T15:00:02Z" finished-at="2019-10-12T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validated_select_Monday_of_dropdown_menu -->
+        <test-method status="PASS" signature="validated_select_Sunday_of_dropdown_menu()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="validated_select_Sunday_of_dropdown_menu" duration-ms="61" started-at="2019-10-12T15:00:02Z" finished-at="2019-10-12T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validated_select_Sunday_of_dropdown_menu -->
+        <test-method status="PASS" signature="validated_select_Wednesday_of_dropdown_menu()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="validated_select_Wednesday_of_dropdown_menu" duration-ms="100" started-at="2019-10-12T15:00:02Z" finished-at="2019-10-12T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validated_select_Wednesday_of_dropdown_menu -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:basicSample.ValidateDropDownMenu@212b5695]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-12T15:00:02Z" finished-at="2019-10-12T15:00:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- basicSample.ValidateDropDownMenu -->
+    </test> <!-- Validate Welcome Page Elements -->
+  </suite> <!-- Suite_test -->
 </testng-results>

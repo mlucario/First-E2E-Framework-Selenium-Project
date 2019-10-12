@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite_test]">
+  <listeners>
+    <listener class-name="Mlucario.Listeners"/>
+  </listeners>
+  <test name="Validate Welcome Page Elements(failed)">
+    <classes>
+      <class name="basicSample.ValidateDropDownMenu">
+        <methods>
+          <include name="initialize"/>
+          <include name="validated_multi_selected_value_of_dropdown_menu_2"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- basicSample.ValidateDropDownMenu -->
+    </classes>
+  </test> <!-- Validate Welcome Page Elements(failed) -->
+</suite> <!-- Failed suite [Suite_test] -->

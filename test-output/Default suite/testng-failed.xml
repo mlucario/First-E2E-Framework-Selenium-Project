@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Mlucario.validateBasicExample">
+      <class name="basicSample.ValidateRadioButton">
         <methods>
+          <include name="validatedInitialRadioButton"/>
+          <include name="validated_Selected_Male_Radio_Button"/>
           <include name="initialize"/>
-          <include name="validateTitlePage"/>
         </methods>
-      </class> <!-- Mlucario.validateBasicExample -->
+      </class> <!-- basicSample.ValidateRadioButton -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -10,8 +10,8 @@ public class BasicExamplePage {
 	private WebDriver driver;
 	private By simpleForm = By.xpath("//a[@class='list-group-item'][contains(text(),'Simple Form Demo')]");
 	private By checkBox = By.xpath("//a[contains(text(),'Check Box Demo')]");
-	private By radioButtons = By.cssSelector("//a[@class='list-group-item'][contains(text(),'Radio Buttons Demo')]");
-	private By dropDownList = By.cssSelector("//a[@class='list-group-item'][contains(text(),'Select Dropdown List')]");
+	private By radioButtons = By.xpath("//a[@class='list-group-item'][contains(text(),'Radio Buttons Demo')]");
+	private By dropDownList = By.xpath("//a[@class='list-group-item'][contains(text(),'Select Dropdown List')]");
 	private By alertJava = By.cssSelector("#basic_example");
 	private By popupModal = By.cssSelector("#inter_example");
 	private By bootstrapAlerts = By.cssSelector("#advanced_example");
