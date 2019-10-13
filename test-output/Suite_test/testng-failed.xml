@@ -6,13 +6,13 @@
   </listeners>
   <test name="Validate Welcome Page Elements(failed)">
     <classes>
-      <class name="basicSample.ValidateDropDownMenu">
+      <class name="basicSample.ValidatePopUp">
         <methods>
           <include name="initialize"/>
-          <include name="validated_multi_selected_value_of_dropdown_menu_2"/>
           <include name="tearDown"/>
+          <include name="validate_switch_to_child_and_fill_data"/>
         </methods>
-      </class> <!-- basicSample.ValidateDropDownMenu -->
+      </class> <!-- basicSample.ValidatePopUp -->
     </classes>
   </test> <!-- Validate Welcome Page Elements(failed) -->
 </suite> <!-- Failed suite [Suite_test] -->

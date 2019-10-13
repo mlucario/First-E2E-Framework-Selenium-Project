@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite_test">
-              <span class="suite-name border-passed">Suite_test</span>
+              <span class="suite-name border-failed">Suite_test</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods,   5 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite_test" class="hide-methods failed suite-Suite_test"> (hide)</a> <!-- hide-methods failed suite-Suite_test -->
+                      <a href="#" panel-name="suite-Suite_test" class="show-methods failed suite-Suite_test"> (show)</a> <!-- show-methods failed suite-Suite_test -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite_test">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidatePopUp" hash-for-method="validate_switch_to_child_and_fill_data">validate_switch_to_child_and_fill_data</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite_test -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,27 +115,7 @@
                     <div class="method-list-content passed suite-Suite_test">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidateDropDownMenu" hash-for-method="validated_multi_selected_value_of_dropdown_menu_1">validated_multi_selected_value_of_dropdown_menu_1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidateDropDownMenu" hash-for-method="validated_multi_selected_value_of_dropdown_menu_2">validated_multi_selected_value_of_dropdown_menu_2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidateDropDownMenu" hash-for-method="validated_select_Monday_of_dropdown_menu">validated_select_Monday_of_dropdown_menu</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidateDropDownMenu" hash-for-method="validated_select_Sunday_of_dropdown_menu">validated_select_Sunday_of_dropdown_menu</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidateDropDownMenu" hash-for-method="validated_select_Wednesday_of_dropdown_menu">validated_select_Wednesday_of_dropdown_menu</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite_test" title="basicSample.ValidatePopUp" hash-for-method="validate_switch_to_child_get_title">validate_switch_to_child_get_title</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_test -->
@@ -136,45 +130,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite_test" class="panel Suite_test">
-          <div class="suite-Suite_test-class-passed">
+          <div class="suite-Suite_test-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">basicSample.ValidateDropDownMenu</span>
+              <img src="failed.png"/>
+              <span class="class-name">basicSample.ValidatePopUp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validated_multi_selected_value_of_dropdown_menu_1">
-                  </a> <!-- validated_multi_selected_value_of_dropdown_menu_1 -->
-                  <span class="method-name">validated_multi_selected_value_of_dropdown_menu_1</span>
+                  <a name="validate_switch_to_child_and_fill_data">
+                  </a> <!-- validate_switch_to_child_and_fill_data -->
+                  <span class="method-name">validate_switch_to_child_and_fill_data</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [The email and password you entered did not match our records. Please double-check and try again] but found [The email and password you entered did not match our records. Please double-check and try again.]
+	at basicSample.ValidatePopUp.validate_switch_to_child_and_fill_data(ValidatePopUp.java:63)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite_test-class-failed -->
+          <div class="suite-Suite_test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">basicSample.ValidatePopUp</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validated_multi_selected_value_of_dropdown_menu_2">
-                  </a> <!-- validated_multi_selected_value_of_dropdown_menu_2 -->
-                  <span class="method-name">validated_multi_selected_value_of_dropdown_menu_2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validated_select_Monday_of_dropdown_menu">
-                  </a> <!-- validated_select_Monday_of_dropdown_menu -->
-                  <span class="method-name">validated_select_Monday_of_dropdown_menu</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validated_select_Sunday_of_dropdown_menu">
-                  </a> <!-- validated_select_Sunday_of_dropdown_menu -->
-                  <span class="method-name">validated_select_Sunday_of_dropdown_menu</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validated_select_Wednesday_of_dropdown_menu">
-                  </a> <!-- validated_select_Wednesday_of_dropdown_menu -->
-                  <span class="method-name">validated_select_Wednesday_of_dropdown_menu</span>
+                  <a name="validate_switch_to_child_get_title">
+                  </a> <!-- validate_switch_to_child_get_title -->
+                  <span class="method-name">validate_switch_to_child_get_title</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,7 +179,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Validate Welcome Page Elements&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;basicSample.ValidateDropDownMenu&quot;/&gt;
+      &lt;class name=&quot;basicSample.ValidatePopUp&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Validate Welcome Page Elements --&gt;
 &lt;/suite&gt; &lt;!-- Suite_test --&gt;
@@ -234,32 +219,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validated_multi_selected_value_of_dropdown_menu_2')
-data.setCell(0, 2, 'basicSample.ValidateDropDownMenu')
-data.setCell(0, 3, 827);
+data.setCell(0, 1, 'validate_switch_to_child_get_title')
+data.setCell(0, 2, 'basicSample.ValidatePopUp')
+data.setCell(0, 3, 4184);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validated_multi_selected_value_of_dropdown_menu_1')
-data.setCell(1, 2, 'basicSample.ValidateDropDownMenu')
-data.setCell(1, 3, 553);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validated_select_Wednesday_of_dropdown_menu')
-data.setCell(2, 2, 'basicSample.ValidateDropDownMenu')
-data.setCell(2, 3, 100);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validated_select_Monday_of_dropdown_menu')
-data.setCell(3, 2, 'basicSample.ValidateDropDownMenu')
-data.setCell(3, 3, 67);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'validated_select_Sunday_of_dropdown_menu')
-data.setCell(4, 2, 'basicSample.ValidateDropDownMenu')
-data.setCell(4, 3, 61);
+data.setCell(1, 1, 'validate_switch_to_child_and_fill_data')
+data.setCell(1, 2, 'basicSample.ValidatePopUp')
+data.setCell(1, 3, 599);
 window.suiteTableData['Suite_test']= { tableData: data, tableDiv: 'times-div-Suite_test'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite_test">
               </div> <!-- times-div-Suite_test -->
             </div> <!-- times-div -->
@@ -285,34 +258,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">basicSample.ValidateDropDownMenu</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">basicSample.ValidatePopUp</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">initialize</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">validated_multi_selected_value_of_dropdown_menu_1</span>
-                <span class="method-start">14013 ms</span>
+                <span class="method-name">validate_switch_to_child_get_title</span>
+                <span class="method-start">13877 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">validated_multi_selected_value_of_dropdown_menu_2</span>
-                <span class="method-start">14570 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">validated_select_Monday_of_dropdown_menu</span>
-                <span class="method-start">15398 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">validated_select_Sunday_of_dropdown_menu</span>
-                <span class="method-start">15466 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">validated_select_Wednesday_of_dropdown_menu</span>
-                <span class="method-start">15529 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validate_switch_to_child_and_fill_data</span>
+                <span class="method-start">18066 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15631 ms</span>
+                <span class="method-start">19134 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -18,7 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class base {
-	public WebDriver driver;
+	public static WebDriver driver;
 	private static String fileSeperator = System.getProperty("file.separator");
 	private int implicitlyWaitTime = 10;
 	public Properties prop = new Properties();
@@ -121,6 +121,7 @@ public class base {
 
 	public void getScreenShot(String dest) throws IOException {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		System.out.println("-------------------------taken screenshot------------------------------");
 		FileUtils.copyFile(src, new File(dest));
 	}
 

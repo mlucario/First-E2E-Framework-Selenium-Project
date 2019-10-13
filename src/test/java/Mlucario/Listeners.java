@@ -16,9 +16,7 @@ import resources.ExtentManager;
 import resources.ExtentTestManager;
 import resources.base;
 
-public class Listeners implements ITestListener {
-
-	private base b = new base();
+public class Listeners extends base implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
@@ -37,8 +35,8 @@ public class Listeners implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 
-		b.LOGGER.info("*** Test execution " + result.getMethod().getMethodName() + " failed...");
-		b.LOGGER.info((result.getMethod().getMethodName() + " failed!"));
+		LOGGER.info("*** Test execution " + result.getMethod().getMethodName() + " failed...");
+		LOGGER.info((result.getMethod().getMethodName() + " failed!"));
 
 		String targetLocation = null;
 
@@ -50,29 +48,29 @@ public class Listeners implements ITestListener {
 		String fileSeperator = System.getProperty("file.separator");
 		String reportsPath = System.getProperty("user.dir") + fileSeperator + "test-output" + fileSeperator
 				+ "screenshots";
-		b.LOGGER.info("Screen shots reports path - " + reportsPath);
+		LOGGER.info("Screen shots reports path - " + reportsPath);
 		try {
 
 			File file = new File(reportsPath + fileSeperator + testClassName); // Set screenshots folder
 
 			if (!file.exists()) {
 				if (file.mkdirs()) {
-					b.LOGGER.info("Directory: " + file.getAbsolutePath() + " is created!");
+					LOGGER.info("Directory: " + file.getAbsolutePath() + " is created!");
 				} else {
-					b.LOGGER.info("Failed to create directory: " + file.getAbsolutePath());
+					LOGGER.info("Failed to create directory: " + file.getAbsolutePath());
 				}
 
 			}
 
 			targetLocation = reportsPath + fileSeperator + testClassName + fileSeperator + screenShotName;
 
-			b.getScreenShot(targetLocation);
-			b.LOGGER.info("Take screen shot of failure test........");
-			b.LOGGER.info("Screen shot file location - " + targetLocation);
+			getScreenShot(targetLocation);
+			LOGGER.info("Take screen shot of failure test........");
+			LOGGER.info("Screen shot file location - " + targetLocation);
 		} catch (FileNotFoundException e) {
-			b.LOGGER.info("File not found exception occurred while taking screenshot " + e.getMessage());
+			LOGGER.info("File not found exception occurred while taking screenshot " + e.getMessage());
 		} catch (Exception e) {
-			b.LOGGER.info("An exception occurred while taking screenshot " + e.getCause());
+			LOGGER.info("An exception occurred while taking screenshot " + e.getCause());
 		}
 
 		// attach screenshots to report
@@ -80,7 +78,7 @@ public class Listeners implements ITestListener {
 			ExtentTestManager.getTest().fail("Screenshot",
 					MediaEntityBuilder.createScreenCaptureFromPath(targetLocation).build());
 		} catch (IOException e) {
-			b.LOGGER.info("An exception occured while taking screenshot " + e.getCause());
+			LOGGER.info("An exception occured while taking screenshot " + e.getCause());
 		}
 		ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
 	}

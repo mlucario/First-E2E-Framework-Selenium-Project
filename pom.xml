@@ -101,7 +101,7 @@
 					<configuration>
 					<!-- TestNG suite XML files -->
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<suiteXmlFile>test.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

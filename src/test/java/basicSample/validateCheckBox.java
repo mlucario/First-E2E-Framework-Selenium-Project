@@ -12,8 +12,9 @@ import pageObject.CheckBoxBasicPage;
 import pageObject.WelcomePage;
 import resources.base;
 
-public class validateCheckBox  extends base {
+public class validateCheckBox extends base {
 	private CheckBoxBasicPage cb;
+
 	@BeforeTest
 	public void initialize() throws IOException {
 		// create WebDriver based on properties file
@@ -29,13 +30,14 @@ public class validateCheckBox  extends base {
 		LOGGER.info("Navigated to check box practice");
 		cb = new CheckBoxBasicPage(driver);
 	}
-	
-	@Test (priority = 1)
+
+	@Test(priority = 1)
 	public void validatedUncheckBox1() {
 		Assert.assertFalse(cb.getAgeCheckBox().isSelected());
 		LOGGER.info("Checkbox Age is Unselected at begininig");
 	}
-	@Test (priority = 2)
+
+	@Test(priority = 2)
 	public void validatedCheckedkBox1() {
 		cb.getAgeCheckBox().click();
 		Assert.assertTrue(cb.getAgeCheckBox().isSelected());
@@ -44,14 +46,14 @@ public class validateCheckBox  extends base {
 		LOGGER.info("success message will display!");
 		Assert.assertEquals(cb.getTxtAge().getText(), "Success - Check box is checked");
 	}
-	
-	@Test (priority = 3)
+
+	@Test(priority = 3)
 	public void validatedButton1() {
 		Assert.assertEquals(cb.getCheckButton().getAttribute("value"), "Check All");
 		LOGGER.info("Validated Button Value Text _ Check All");
 	}
-	
-	@Test (priority = 4)
+
+	@Test(priority = 4)
 	public void validateButtonCheckAll() {
 		cb.getCheckButton().click();
 		Assert.assertEquals(cb.getCheckbox1().isSelected(), true);
@@ -60,7 +62,8 @@ public class validateCheckBox  extends base {
 		Assert.assertEquals(cb.getCheckbox4().isSelected(), true);
 		Assert.assertEquals(cb.getCheckButton().getAttribute("value"), "Uncheck All");
 	}
-	@Test (priority = 5)
+
+	@Test(priority = 5)
 	public void validateButtonUnCheckAll() {
 		cb.getCheckButton().click();
 		Assert.assertEquals(cb.getCheckbox1().isSelected(), false);
@@ -69,7 +72,8 @@ public class validateCheckBox  extends base {
 		Assert.assertEquals(cb.getCheckbox4().isSelected(), false);
 		Assert.assertEquals(cb.getCheckButton().getAttribute("value"), "Check All");
 	}
-	@Test (priority = 6)
+
+	@Test(priority = 6)
 	public void validateCheckAllValue() {
 		cb.getCheckButton().click();
 		Assert.assertEquals(cb.getCheckbox1().isSelected(), true);
@@ -81,7 +85,7 @@ public class validateCheckBox  extends base {
 		cb.getCheckbox3().click();
 		Assert.assertEquals(cb.getCheckButton().getAttribute("value"), "Check All");
 	}
-	
+
 	@AfterTest
 	public void tearDown() {
 		driver.quit();

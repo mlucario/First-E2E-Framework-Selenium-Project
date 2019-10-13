@@ -12,10 +12,10 @@ public class BasicExamplePage {
 	private By checkBox = By.xpath("//a[contains(text(),'Check Box Demo')]");
 	private By radioButtons = By.xpath("//a[@class='list-group-item'][contains(text(),'Radio Buttons Demo')]");
 	private By dropDownList = By.xpath("//a[@class='list-group-item'][contains(text(),'Select Dropdown List')]");
-	private By alertJava = By.cssSelector("#basic_example");
-	private By popupModal = By.cssSelector("#inter_example");
-	private By bootstrapAlerts = By.cssSelector("#advanced_example");
-	private By bootstrapModals = By.cssSelector("#done_example");
+	private By alertJava = By.xpath("//a[@class='list-group-item'][contains(text(),'Javascript Alerts')]");
+	private By popupModal = By.xpath("//a[@class='list-group-item'][contains(text(),'Window Popup Modal')]");
+	private By bootstrapAlerts = By.xpath("//a[@class='list-group-item'][contains(text(),'Bootstrap Alerts')]");
+	private By bootstrapModals = By.xpath("//a[@class='list-group-item'][contains(text(),'Bootstrap Modals')]");
 	private By listElements = By.xpath("//div[@id='basic']//div[@class='list-group']");
 
 	public BasicExamplePage(WebDriver driver) {
@@ -41,7 +41,7 @@ public class BasicExamplePage {
 
 	}
 
-	public WebElement getAlertJava() {
+	public WebElement getAlertJavaScript() {
 		return driver.findElement(alertJava);
 
 	}
