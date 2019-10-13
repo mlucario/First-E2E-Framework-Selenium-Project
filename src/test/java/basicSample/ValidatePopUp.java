@@ -61,7 +61,7 @@ public class ValidatePopUp extends base {
 		driver.findElement(By.xpath("//input[@name='commit']")).click();
 		LOGGER.debug("Sign in with invalid info.");
 		Assert.assertEquals(driver.findElement(By.cssSelector("#message-drawer")).getText(),
-				"The email and password you entered did not match our records. Please double-check and try again");
+				"The email and password you entered did not match our records. Please double-check and try again.");
 
 	}
 
